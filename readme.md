@@ -1,6 +1,6 @@
 # マナちゃん
 
-## DEMO
+## https://keiji-nagaki.github.io/janken/
 
 ## 紹介と使い方
 　3つのゲームを用意
