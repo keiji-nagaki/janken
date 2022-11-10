@@ -6,7 +6,7 @@ body {
 }
 
 .title {
-    background: url(../img/mana1.JPG);
+    background: url(../img/mana1.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
