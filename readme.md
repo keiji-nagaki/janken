@@ -1,6 +1,6 @@
 # マナちゃん
 
-## https://keiji-nagaki.github.io/janken/
+## https://keiji-nagaki.github.io/janken/git
 
 ## 紹介と使い方
 　3つのゲームを用意
