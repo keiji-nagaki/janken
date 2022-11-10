@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/soroukana.css">
+    <title>課題</title>
+</head>
+
+<body>
+    <div class="title">
+        <h1>マナちゃんそろうかな？</h1>
+    </div>
+    <div>
+        <p>6つのアイコンのうち1つ選択してください!</p>
+    </div>
+    <button onclick="location.href='kadai_home.html'">ホーム</button>
+    <button onclick="location.href='kadai_soroukana.html'">もう一回</button>
+    <div>
+        <div class="btn">
+            <button type="button" id="btn1" class="q_btn"><img src="img/mana1.jpg" alt=""></button>
+            <button type="button" id="btn2" class="q_btn"><img src="img/mana2.jpg" alt=""></button>
+            <button type="button" id="btn3" class="q_btn"><img src="img/mana3.JPG" alt=""></button>
+            <button type="button" id="btn4" class="q_btn"><img src="img/mana4.JPG" alt=""></button>
+            <button type="button" id="btn5" class="q_btn"><img src="img/mana5.JPG" alt=""></button>
+            <button type="button" id="btn6" class="q_btn"><img src="img/mana6.jpg" alt=""></button>
+        </div>
+
+        <div class="name">
+            <p>プレイヤー</p>
+            <p id="kotae" class="kekka"></p>
+            <p>コンピューター</p>
+        </div>
+
+        <div class="pppp">
+            <div class="picture" id="demo1"> </div>
+            <div class="picture" id="equal1"> </div>
+            <div class="picture" id="demo2"> <img src="img/hatena.png" alt=""></div>
+        </div>
+    </div>
+
+
+
+
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        $("#btn1").on("click", function () {
+            const push = Math.floor(Math.random() * 6) + 1;
+            //console.log("push");
+            if (push === 1) {
+                $("#demo1").html('<img src="img/mana1.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana1.jpg" alt="">');
+                $("#equal1").html('<video src="img/1.mp4" autoplay muted width="300px" height="400px">');
+                $("#kotae").text("揃った！！！");
+            }
+            else if (push === 2) {
+                $("#demo1").html('<img src="img/mana1.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana2.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 3) {
+                $("#demo1").html('<img src="img/mana1.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana3.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 4) {
+                $("#demo1").html('<img src="img/mana1.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana4.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 5) {
+                $("#demo1").html('<img src="img/mana1.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana5.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else {
+                $("#demo1").html('<img src="img/mana1.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana6.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+        });
+
+        $("#btn2").on("click", function () {
+            const push = Math.floor(Math.random() * 6) + 1;
+            console.log("push");
+            if (push === 1) {
+                $("#demo1").html('<img src="img/mana2.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana1.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 2) {
+                $("#demo1").html('<img src="img/mana2.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana2.jpg" alt="">');
+                $("#equal1").html('<video src="img/2.mp4" autoplay muted width="300px" height="400px">');
+                $("#kotae").text("揃った！！！");
+            }
+            else if (push === 3) {
+                $("#demo1").html('<img src="img/mana2.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana3.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 4) {
+                $("#demo1").html('<img src="img/mana2.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana4.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 5) {
+                $("#demo1").html('<img src="img/mana2.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana5.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else {
+                $("#demo1").html('<img src="img/mana2.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana6.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+        });
+
+        $("#btn3").on("click", function () {
+            const push = Math.floor(Math.random() * 6) + 1;
+            console.log("push");
+            if (push === 1) {
+                $("#demo1").html('<img src="img/mana3.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana1.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 2) {
+                $("#demo1").html('<img src="img/mana3.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana2.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 3) {
+                $("#demo1").html('<img src="img/mana3.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana3.JPG" alt="">');
+                $("#equal1").html('<video src="img/3.mp4" autoplay muted width="300px" height="400px">');
+                $("#kotae").text("揃った！！！");
+            }
+            else if (push === 4) {
+                $("#demo1").html('<img src="img/mana3.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana4.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 5) {
+                $("#demo1").html('<img src="img/mana3.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana5.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else {
+                $("#demo1").html('<img src="img/mana3.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana6.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+        });
+
+        $("#btn4").on("click", function () {
+            const push = Math.floor(Math.random() * 6) + 1;
+            console.log("push");
+
+            if (push === 1) {
+                $("#demo1").html('<img src="img/mana4.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana1.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 2) {
+                $("#demo1").html('<img src="img/mana4.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana2.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 3) {
+                $("#demo1").html('<img src="img/mana4.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana3.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 4) {
+                $("#demo1").html('<img src="img/mana4.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana4.JPG" alt="">');
+                $("#equal1").html('<video src="img/4.mp4" autoplay muted width="300px" height="400px">');
+                $("#kotae").text("揃った！！！");
+            }
+            else if (push === 5) {
+                $("#demo1").html('<img src="img/mana4.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana5.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else {
+                $("#demo1").html('<img src="img/mana4.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana6.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+        });
+
+        $("#btn5").on("click", function () {
+            const push = Math.floor(Math.random() * 6) + 1;
+            console.log("push");
+
+            if (push === 1) {
+                $("#demo1").html('<img src="img/mana5.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana1.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 2) {
+                $("#demo1").html('<img src="img/mana5.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana2.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 3) {
+                $("#demo1").html('<img src="img/mana5.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana3.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 4) {
+                $("#demo1").html('<img src="img/mana5.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana4.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 5) {
+                $("#demo1").html('<img src="img/mana5.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana5.JPG" alt="">');
+                $("#equal1").html('<video src="img/5.mp4" autoplay muted width="300px" height="400px">');
+                $("#kotae").text("揃った！！！");
+            }
+            else {
+                $("#demo1").html('<img src="img/mana5.JPG" alt="">');
+                $("#demo2").html('<img src="img/mana6.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="300px" height="200px">');
+                $("#kotae").text("残念");
+            }
+        });
+
+        $("#btn6").on("click", function () {
+            const push = Math.floor(Math.random() * 6) + 1;
+            console.log("push");
+
+            if (push === 1) {
+                $("#demo1").html('<img src="img/mana6.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana1.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="160px" height="200px">< img src = "img/heart.png">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 2) {
+                $("#demo1").html('<img src="img/mana6.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana2.jpg" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="160px" height="200px">< img src = "img/heart.png">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 3) {
+                $("#demo1").html('<img src="img/mana6.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana3.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="160px" height="200px">< img src = "img/heart.png">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 4) {
+                $("#demo1").html('<img src="img/mana6.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana4.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="160px" height="200px">< img src = "img/heart.png">');
+                $("#kotae").text("残念");
+            }
+            else if (push === 5) {
+                $("#demo1").html('<img src="img/mana6.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana5.JPG" alt="">');
+                $("#equal1").html('<video src="img/bu.mp4" autoplay muted width="160px" height="200px">< img src = "img/heart.png">');
+                $("#kotae").text("残念");
+            }
+            else {
+                $("#demo1").html('<img src="img/mana6.jpg" alt="">');
+                $("#demo2").html('<img src="img/mana6.jpg" alt="">');
+                $("#equal1").html('<video src="img/6.mp4" autoplay muted width="160px" height="400px">< img src = "img/heart.png">');
+                $("#kotae").text("揃った！！！");
+            }
+        });
+    </script>
+</body>
+
+</html>

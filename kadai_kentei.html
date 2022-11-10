@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/kentei.css">
+    <title>課題</title>
+</head>
+
+<body>
+    <div class="title">
+        <h1>マナちゃんもんだい</h1>
+    </div>
+
+    <button onclick="location.href='kadai_home.html'">HOME</button>
+
+    <div class="btn">
+        <button type="button" id="btn1" class="q_btn">もんだい</button>
+
+    </div>
+
+    <div class="qqqq">
+        <p id="mondai" class="question"></p>
+    </div>
+
+    <div class="pppp" id="seikai">
+        <div class="picture" id="q1"> </div>
+        <div class="picture" id="q2"> </div>
+        <div class="picture" id="q3"></div>
+    </div>
+    <div class="btn">
+        <button type="button" id="a_btn1" class="a_btn">1</button>
+        <button type="button" id="a_btn2" class="a_btn">2</button>
+        <button type="button" id="a_btn3" class="a_btn">3</button>
+    </div>
+
+    <div class="kekka" id="kotae"></div>
+
+    <button onclick="location.href='kadai_kentei.html'">もう一回</button>
+
+
+
+
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $("#btn1").on("click", function () {
+            const push = Math.floor(Math.random() * 3) + 1;
+            //console.log("push");
+            if (push === 1) {
+                $("#mondai").html("マナちゃんの生年月日は？");
+                $("#q1").html("2020年8月11日");
+                $("#q2").html("2021年8月11日");
+                $("#q3").html("2022年8月11日");
+
+                $("#a_btn1").on("click", function () {
+                    $("#kotae").html("残念");
+                });
+                $("#a_btn2").on("click", function () {
+                    $("#kotae").html("正解");
+                    $("#seikai").html('<img src="img/1_1.jpg" alt="" height="500px">')
+                });
+                $("#a_btn3").on("click", function () {
+                    $("#kotae").html("残念");
+                });
+            }
+
+            else if (push === 2) {
+                $("#mondai").html("かき氷を食べたらどうなった？");
+                $("#q1").html("喜んだ");
+                $("#q2").html("真顔になった");
+                $("#q3").html("冷たくてびっくりした");
+
+                $("#a_btn1").on("click", function () {
+                    $("#kotae").html("残念");
+                });
+                $("#a_btn2").on("click", function () {
+                    $("#kotae").html("残念");
+                });
+                $("#a_btn3").on("click", function () {
+                    $("#kotae").html("正解");
+                    $("#seikai").html('<video src="img/kakigori.mp4" autoplay muted width="300px" height="500px">')
+                });
+            }
+
+            else {
+                $("#mondai").html("マナちゃんはどこから来る？");
+                $("#q1").html("下");
+                $("#q2").html("右");
+                $("#q3").html("左");
+
+                $("#a_btn1").on("click", function () {
+                    $("#kotae").html("正解");
+                    $("#seikai").html('<video src="img/tojo.mp4" autoplay muted width="300px" height="500px">')
+                });
+                $("#a_btn2").on("click", function () {
+                    $("#kotae").html("残念");
+                });
+                $("#a_btn3").on("click", function () {
+                    $("#kotae").html("残念");
+                });
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
