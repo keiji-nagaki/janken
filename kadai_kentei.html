@@ -15,9 +15,10 @@
 
     <button onclick="location.href='index.html'">HOME</button>
 
+
     <div class="btn">
         <button type="button" id="btn1" class="q_btn">もんだい</button>
-
+        <button onclick="location.href='kadai_kentei.html'">もう一回</button>
     </div>
 
     <div class="qqqq">
@@ -37,7 +38,6 @@
 
     <div class="kekka" id="kotae"></div>
 
-    <button onclick="location.href='kadai_kentei.html'">もう一回</button>
 
 
 
@@ -48,23 +48,23 @@
 
     <script>
         $("#btn1").on("click", function () {
-            const push = Math.floor(Math.random() * 3) + 1;
+            const push = Math.floor(Math.random() * 4) + 1;
             //console.log("push");
             if (push === 1) {
                 $("#mondai").html("マナちゃんの生年月日は？");
-                $("#q1").html("2020年8月11日");
-                $("#q2").html("2021年8月11日");
-                $("#q3").html("2022年8月11日");
+                $("#q1").html("2020年8月12日");
+                $("#q2").html("2021年8月12日");
+                $("#q3").html("2022年8月12日");
 
                 $("#a_btn1").on("click", function () {
-                    $("#kotae").html("残念");
+                    $("#mondai").html("残念");
                 });
                 $("#a_btn2").on("click", function () {
-                    $("#kotae").html("正解");
-                    $("#seikai").html('<img src="img/1_1.jpg" alt="" height="500px">')
+                    $("#mondai").html("正解");
+                    $("#seikai").html('<img src="img/1_1.jpg" alt="" height="300px">')
                 });
                 $("#a_btn3").on("click", function () {
-                    $("#kotae").html("残念");
+                    $("#mondai").html("残念");
                 });
             }
 
@@ -75,14 +75,31 @@
                 $("#q3").html("冷たくてびっくりした");
 
                 $("#a_btn1").on("click", function () {
-                    $("#kotae").html("残念");
+                    $("#mondai").html("残念");
                 });
                 $("#a_btn2").on("click", function () {
-                    $("#kotae").html("残念");
+                    $("#mondai").html("残念");
                 });
                 $("#a_btn3").on("click", function () {
-                    $("#kotae").html("正解");
-                    $("#seikai").html('<video src="img/kakigori.mp4" autoplay muted width="300px" height="500px">')
+                    $("#mondai").html("正解");
+                    $("#seikai").html('<video src="img/kakigori.mp4" autoplay muted width="300px" height="400px">')
+                });
+            }
+            else if (push === 3) {
+                $("#mondai").html("まなちゃんの特技は？");
+                $("#q1").html("料理");
+                $("#q2").html("洗濯");
+                $("#q3").html("掃除");
+
+                $("#a_btn1").on("click", function () {
+                    $("#mondai").html("残念");
+                });
+                $("#a_btn2").on("click", function () {
+                    $("#mondai").html("残念");
+                });
+                $("#a_btn3").on("click", function () {
+                    $("#mondai").html("正解");
+                    $("#seikai").html('<video src="img/souji.MP4" autoplay muted width="300px" height="400px">')
                 });
             }
 
@@ -93,14 +110,14 @@
                 $("#q3").html("左");
 
                 $("#a_btn1").on("click", function () {
-                    $("#kotae").html("正解");
-                    $("#seikai").html('<video src="img/tojo.mp4" autoplay muted width="300px" height="500px">')
+                    $("#mondai").html("正解");
+                    $("#seikai").html('<video src="img/tojo.mp4" autoplay muted width="300px" height="400px">')
                 });
                 $("#a_btn2").on("click", function () {
-                    $("#kotae").html("残念");
+                    $("#mondai").html("残念");
                 });
                 $("#a_btn3").on("click", function () {
-                    $("#kotae").html("残念");
+                    $("#mondai").html("残念");
                 });
             }
         });
